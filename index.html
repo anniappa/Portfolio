@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Portfolio | Modern Architecture & Design</title>
+    <meta name="description" content="A showcase of modern architectural projects with interactive 3D visualization">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">PORTFOLIO</a>
+            <div class="nav-menu">
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <div class="nav-controls">
+                    <button class="lang-toggle">EN / PL</button>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><svg>...</svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg>...</svg></a>
+                        <a href="#" aria-label="Behance"><svg>...</svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Modern Architecture & Design</h1>
+            <p class="hero-subtitle">Creating spaces that inspire and transform</p>
+            <a href="#projects" class="hero-cta">View Projects</a>
+        </div>
+        <div class="hero-canvas" id="hero-canvas"></div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Selected Projects</h2>
+            
+            <!-- Project 1 -->
+            <article class="project-item" data-project="1">
+                <div class="project-info">
+                    <h3 class="project-title">Urban Residence</h3>
+                    <p class="project-description">Modern urban living with sustainable design principles</p>
+                    <ul class="project-details">
+                        <li>Location: Warsaw, Poland</li>
+                        <li>Year: 2023</li>
+                        <li>Area: 240m²</li>
+                    </ul>
+                    <a href="#" class="project-link">View Details</a>
+                </div>
+                <div class="project-visual">
+                    <div class="project-canvas" id="project-1-canvas"></div>
+                    <div class="project-controls">
+                        <button class="control-rotate">Rotate</button>
+                        <button class="control-reset">Reset View</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-item" data-project="2">
+                <div class="project-info">
+                    <h3 class="project-title">Mountain Retreat</h3>
+                    <p class="project-description">Harmonious integration with natural landscape</p>
+                    <ul class="project-details">
+                        <li>Location: Zakopane, Poland</li>
+                        <li>Year: 2022</li>
+                        <li>Area: 180m²</li>
+                    </ul>
+                    <a href="#" class="project-link">View Details</a>
+                </div>
+                <div class="project-visual">
+                    <div class="project-canvas" id="project-2-canvas"></div>
+                    <div class="project-controls">
+                        <button class="control-rotate">Rotate</button>
+                        <button class="control-reset">Reset View</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About</h2>
+                <p>We create architectural solutions that blend innovative design with functional excellence. Our approach combines technical expertise with artistic vision to deliver spaces that inspire and endure.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Awards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/scroll-manager.js"></script>
+    <script src="js/three-scene.js"></script>
+    <script src="js/ui-manager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
